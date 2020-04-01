@@ -9,7 +9,7 @@ Magic commands:
 
 # Linking R kernel to jupyter notebook
 
-For CentOS 7:
+For CentOS 7:  
 	1. yum install openssl-devel  
 	2. sudo yum install R  
 	3. cd /usr/bin  
