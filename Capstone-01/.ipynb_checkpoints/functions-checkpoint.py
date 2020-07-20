@@ -1,6 +1,13 @@
 import numpy as np
 import pandas as pd
 
+def log1p(X,columns):
+    X_new = X.copy()
+    for col in columns:
+        X_new['log1p({})'.format(col)] = np.log1p(X_new[col])
+        #X_new.drop(col,axis=1,inplace=True)
+    return X_new
+
 def remove_outliers(X,columns,thresholds):
     outlier = pd.DataFrame()
     for column,threshold in zip(columns,thresholds):
@@ -53,7 +60,9 @@ def augment(X,geo_df):
 def addFeatures(X, new_features=['AreaPerRoom','GarageYrBltMinusYearBuilt']):
     for feat in new_features:
         if feat == 'AreaPerRoom':
+            #GrLivArea = np.expm1(X['log1p(GrLivArea)'])
             X['AreaPerRoom'] = X['GrLivArea'].divide(X.TotRmsAbvGrd)
+            X['log1p(AreaPerRoom)'] = np.log1p(X.AreaPerRoom)
         elif feat == 'GarageYrBltMinusYearBuilt':
             X['GarageYrBltMinusYearBuilt']=X['GarageYrBlt'].subtract(X.YearBuilt)
     return X
