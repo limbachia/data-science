@@ -10,5 +10,5 @@ Following notebooks include step-by-step analysis of the dataset; from data wran
 [03-model-building.ipynb](https://github.com/limbachia/data-science/blob/master/Capstone-01/03-model-building.ipynb): building several models, model-tuning, selection of the best model/parameters.
 
 Lasso regression performed the best. The model was finally tested on the test dataset (also provided by kaggle). 
-The test __Root-Mean-Squared-Error was 0.11840__ which placed the submission in the top 5% of the [kaggle's leaderboard](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/leaderboard#score)
+The test __Root-Mean-Squared-Error was 0.11840__ which placed the submission in the top 5% of the [kaggle's leaderboard](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/leaderboard#score).
 
