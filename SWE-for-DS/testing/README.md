@@ -1,0 +1,1 @@
+# [Ned Batchelder: Getting Started Testing - PyCon 2014](https://youtu.be/FxSsnHeWQBY)
